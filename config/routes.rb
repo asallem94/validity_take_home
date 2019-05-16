@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:show, :index]
-    users to: "users#duplicates"
+    get '/duplicates', to: "users#duplicates"
   end
 
 end
