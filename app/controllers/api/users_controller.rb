@@ -6,10 +6,9 @@ class Api::UsersController < ApplicationController
 
     def duplicates
         @duplicates = User.duplicates
-        # .ids.sort
-        @duplicates_check = User.duplicates_check
-        # .ids.sort
-        @answer = @duplicates == @duplicates_check 
-        debugger
+    end
+    def duplicates_check
+        @duplicates = User.duplicates_check
+        render :duplicates
     end
 end
