@@ -1,24 +1,48 @@
-# README
+#Validity Take Home Assessent
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Intro
 
-Things you may want to cover:
+This take home assessment form Validity is a demonstration of my ability to create a web application.
 
-* Ruby version
+This application uses a React Frontend and Rails MVC backend. Validity uses a Spring MVC backend. Because Spring and Rails have a MVC framework, Recoding this chalenge to a Spring backend would not be a problem and I would gladly do it upon request.
 
-* System dependencies
+## Backend:
 
-* Configuration
+I would like to say I also went the extra mile in this assessment and fulfilled the advanced challenge which was to create an algorithim to extract the duplicate user records from the advanced data set as well as the normal dataset.
 
-* Database creation
+below is a code snipet to extract duplicates
 
-* Database initialization
+```ruby
+    h1 = {}
+    h2 = {}
+    h3 = {}
+    dup_hsh = {}
+    answer = []
+    self.all.each do |a|
+        if h1[a.first_name.soundex] && h2[a.last_name.soundex] && h3[a.email.soundex]
+            dup_hsh[(a.first_name+' '+a.last_name).soundex] = a
 
-* How to run the test suite
+        else
+            h1[a.first_name.soundex] = a.id
+            h2[a.last_name.soundex] = a.id
+            h3[a.email.soundex] = a.id
+        end
+    end
+    self.all.each do |a|
+        if dup_hsh[(a.first_name + ' ' + a.last_name).soundex]
+            answer.push(a)
+        end
+    end
+    answer
+```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+The Time complexity of the algorithm is O(n) because I loop through all the user records twice to extract duplicates
 
-* ...
+The space complexity is also O(n) because I am creating hashes of n size with keys of their encrypted values.
+
+
+## Frontend:
+
+Because the position will focus heavily on the frontend, I created a frontend to display the data extracted from the backend.  The frontend makes to calls to the backend.  The first call is the extracted duplicates explained in the backend section above.
+
