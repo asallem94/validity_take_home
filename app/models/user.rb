@@ -6,12 +6,13 @@ class User < ApplicationRecord
         dup_hsh = {}
         answer = []
         self.all.each do |a|
-            if h1[a.first_name.soundex] && h2[a.last_name.soundex]
+            if h1[a.first_name.soundex] && h2[a.last_name.soundex] && h3[a.email.soundex]
                 dup_hsh[(a.first_name+' '+a.last_name).soundex] = a
 
             else
                 h1[a.first_name.soundex] = a.id
                 h2[a.last_name.soundex] = a.id
+                h3[a.email.soundex] = a.id
             end
         end
         self.all.each do |a|
