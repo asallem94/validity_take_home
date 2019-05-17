@@ -6,7 +6,7 @@ export const fetchDupicateUsers = () => {
     });
 };
 export const fetchDupicateCheck = () => {
-    return _fetch('/api/check', {
+    return _fetch('/api/duplicates_check', {
         method: "GET"
     });
 };

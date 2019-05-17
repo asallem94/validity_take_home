@@ -8,7 +8,7 @@
 require 'csv'    
 
 User.destroy_all
-csv_text = File.read('db/normal.csv')
+csv_text = File.read('db/advanced.csv')
 csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row, i |
     values = row.to_hash
