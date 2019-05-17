@@ -4,7 +4,10 @@
 
 This take home assessment form Validity is a demonstration of my ability to create a web application.
 
-This application uses a React Frontend and Rails MVC backend. Validity uses a Spring MVC backend. Because Spring and Rails have a MVC framework, Recoding this chalenge to a Spring backend would not be a problem and I would gladly do it upon request.
+This application uses a React Frontend and Rails MVC backend. Validity uses a Spring MVC backend. Because Spring and Rails have a MVC framework, Recoding this challenge to a Spring backend would not be a problem and I would gladly do it upon request.
+
+Here is the Live Link:
+[https://validity-assessment.herokuapp.com/#/](https://validity-assessment.herokuapp.com/#/)
 
 ## Backend:
 
