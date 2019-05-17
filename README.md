@@ -52,6 +52,10 @@ In the prompt the actual duplicates were identified by having the same Id.  Ther
 
 To display the records in a clean and organized manner I placed the information in a react table.  This way the user can sort by attribute of their choice.  Moreover, I added additional functionality which was to swap the actual and the extracted duplicates by clicking the buttons that are located above the table.  There is no change because the duplicate values are exactly the same as the actual duplicate values as intended.
 
+See Frontend visual below: 
+
+![Frontend](app/assets/images/demo.png)
+
 ## Thank you
 
 Thank you for giving me the oppurtunity to demonstrate my knowledge and skills. In the future, I hope to grow further with you.
